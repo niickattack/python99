@@ -2,12 +2,12 @@
 
 #Code
 
-def problem(object):
-	var1 = len(object)
+def problem(a):
+	var1 = len(a)
 	var2 = var1 - 2
 	try:
 		var3 = a[var2]
 	except:
-		print 'There is a problem with the list provided, it may be empty.'
+		return 'There is a problem with the list provided, it may not be a list, or it may be empty.'
 	else:
-		print var3
+		return var3

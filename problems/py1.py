@@ -4,35 +4,21 @@
 # X = d
 
 # Code
-def problem(a):
-	var1 = len(a)
-	var2 = var1 - 1
+def problem(self):
+	print self
+	print type(self)
+	print list
 	try:
-		var3 = a[var2]
+		self.d = self.assertIsInstance(type(self), list)
 	except:
-		print 'There is a problem with the list provided, it may be empty.'
+		return 'The input you provided is not a list.'
 	else:
-		return var3
+		self.a = len(self)
+		self.b = self.a - 1
+		self.c = self[self.b]
+		return self.c
+	
+a = [1,2,3]
 
-
-
-# Tests
-#1
-#test1 = [0,1,2,3]
-#problem1(test1)
-
-#2
-#test2 = []
-#problem1(test2)
-
-#3
-#test3 = [a,1,3,r,-1]
-#problem1(test3)
-
-# Researched Answer
-#def problem1(list):
-#	return list[-1]
-
-#list = [1,2]
-#
-#print getlast(list)
+print problem(a)
+	
