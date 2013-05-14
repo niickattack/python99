@@ -5,20 +5,17 @@
 
 # Code
 def problem(self):
-	print self
-	print type(self)
-	print list
-	try:
-		self.d = self.assertIsInstance(type(self), list)
+	d = isinstance(self, list)
+	try:	
+		assert d == True
 	except:
 		return 'The input you provided is not a list.'
 	else:
-		self.a = len(self)
-		self.b = self.a - 1
-		self.c = self[self.b]
-		return self.c
-	
-a = [1,2,3]
-
-print problem(a)
-	
+		a = len(self)
+		e = 0
+		b = a - 1
+		if b > e:
+			c = self[b]
+		else:
+			c = 'The list you provided is empty.'
+		return c
