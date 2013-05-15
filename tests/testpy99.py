@@ -23,6 +23,8 @@ class testing99problems(unittest.TestCase):
 		self.a = 'run'
 		self.assertEqual(py1.problem(self.a),'The input you provided is not a list.', )
 		print py1.problem(self.a),'The input you provided is not a list.'
+
+# Problem 2
 		
 	def test_problem2_expected_list(self):
 		self.a = [1,2,3] #last but one = 2
@@ -43,4 +45,36 @@ class testing99problems(unittest.TestCase):
 		self.a = 'run'
 		self.assertEqual(py2.problem(self.a),'The input you provided is not a list.', )
 		print py2.problem(self.a),'The input you provided is not a list.'
+
+# Problem 3
+
+	def test_problem3_expected_list(self):
+		self.a = 2
+		self.b = [1,2,3] #self.a = 3
+		self.assertEqual(py3.problem(self.a,self.b), 3)
+		print py3.problem(self.a,self.b), 3
+	
+	def test_problem3_non_int(self):
+		self.a = [1] #not an int
+		self.b = [1,2,3]
+		self.assertEqual(py3.problem(self.a,self.b), 'You did not provide an int.')
+		print py3.problem(self.a,self.b), 'You did not provide an int.'
 		
+	def test_problem3_empty_list(self):
+		self.a = 3
+		self.b = [] #empty list
+		self.assertEqual(py3.problem(self.a,self.b), 'The list you provided contains less than ' + str(self.a) + ' elements.')
+		print py3.problem(self.a,self.b), 'The list you provided contains less than ' + str(self.a) + ' elements.'
+	
+	def test_problem3_not_a_list(self):
+		self.a = 3
+		self.b = 'run'
+		self.assertEqual(py3.problem(self.a,self.b),'The input you provided is not a list.', )
+		print py3.problem(self.a,self.b),'The input you provided is not a list.'
+	
+	def test_problem3_one_item_list(self):
+		self.a = 0
+		self.b = [1]
+		self.assertEqual(py3.problem(self.a,self.b),1)
+		print py3.problem(self.a,self.b), 1
+
