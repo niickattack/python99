@@ -14,7 +14,7 @@ def problem(self):
 		a = len(self)
 		e = 0
 		b = a - 1
-		if b > e:
+		if b >= e:
 			c = self[b]
 		else:
 			c = 'The list you provided is empty.'

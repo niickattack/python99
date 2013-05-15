@@ -2,12 +2,20 @@
 
 #Code
 
-def problem(a):
-	var1 = len(a)
-	var2 = var1 - 2
-	try:
-		var3 = a[var2]
+def problem(self):
+	d = isinstance(self, list)
+	try:	
+		assert d == True
 	except:
-		return 'There is a problem with the list provided, it may not be a list, or it may be empty.'
+		return 'The input you provided is not a list.'
 	else:
-		return var3
+		a = len(self)
+		e = 0
+		b = a - 2
+		if b >= e:
+			c = self[b]
+		elif b == -1:
+			c = 'The list you provided contains only one element.'
+		else:
+			c = 'The list you provided is empty.'	
+		return c
